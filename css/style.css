@@ -1,0 +1,133 @@
+:root{
+    --blue:#003cff;
+}
+*{
+ margin: 0; padding:0;
+ box-sizing: border-box;
+ font-family: "times new roman", sans-serif;
+ outline: none;border: none;
+ text-decoration:none;
+ text-transform: capitalize;
+ transition: .2s linear;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow: hidden;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    z-index: 1000;
+    display: flex;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+header .logo{
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+    padding: 1rem;  
+}
+header .logo span{
+    color: var(--blue);
+    font-size: 4rem;
+}
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #333;
+}
+header .navbar a:hover{
+    color: var(--blue);
+}
+header .icons a{
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    color: #333;
+}
+header .icons a:hover{
+    color: var(--blue);
+}
+header #toggler{
+    display: none;
+}
+header .fa-bars{
+    font-size:  3rem;
+    color: #333;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .5rem 1.5rem;
+    border: .1rem solid rgba(0, 0, 0, 3);
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 2rem;
+    }
+}
+
+@media(max-width:855px){
+    header .fa-bars{
+        display: block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #eee;
+        border-top: .1 rem solid rgba(0, 0, 0, 1);
+        
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+       
+    }
+    header #toggler:checked ~ .navbar{  
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    header .navbar a{
+        margin: 1.5rem ;
+        display: block;
+        text-align: center;
+        padding: 1.5rem 0;
+        font-size: 2rem;
+        background: #fff;
+        border: .1rem solid rgba(0, 0, 0, .1);
+        display: block;
+    }
+
+}
+
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+}
+
+ 
+
